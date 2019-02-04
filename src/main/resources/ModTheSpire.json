@@ -1,0 +1,11 @@
+{
+  "modid": "wyrmicmod",
+  "name": "The Wyrmic",
+  "author_list": ["andrew"],
+  "description": "Wyrmics are fighters who have learnt how to mimic some of the aspects of the dragons. They have access to abilities normally belonging to the various kind of drakes.",
+  "version": "${project.version}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}

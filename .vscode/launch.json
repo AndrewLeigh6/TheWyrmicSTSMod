@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - wyrmicmod",
+            "request": "launch",
+            "mainClass": "wyrmicmod.wyrmicmod",
+            "projectName": "WyrmicMod"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WyrmicMod",
+            "request": "launch",
+            "mainClass": "wyrmicmod.WyrmicMod",
+            "projectName": "WyrmicMod"
+        }
+    ]
+}

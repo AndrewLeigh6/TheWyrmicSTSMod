@@ -1,0 +1,53 @@
+{
+  "TheWyrmic:WyrmicCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "TheWyrmic:WyrmicCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "TheWyrmic:WyrmicCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Keywords."
+  },
+  "TheWyrmic:WyrmicUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "TheWyrmic:WyrmicUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "TheWyrmic:WyrmicUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 Keywords."
+  },
+  "TheWyrmic:WyrmicRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "TheWyrmic:WyrmicRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
+  },
+  "TheWyrmic:WyrmicRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "TheWyrmic:WyrmicAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [R] times. NL (Deal !TheWyrmic:ENERGY_DAMAGE! damage total.)"
+  },
+  "TheWyrmic:WyrmicSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !TheWyrmic:SecondMagic! poison to an enemy."
+  },
+  "TheWyrmic:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Wyrmic Orb."
+  }
+}

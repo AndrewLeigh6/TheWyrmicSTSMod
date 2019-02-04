@@ -1,0 +1,14 @@
+{
+  "TheWyrmic:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": ["You applied ", " keyword.", " keywords."]
+  },
+  "TheWyrmic:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH ",
+      " enemy.",
+      " enemies."
+    ]
+  }
+}

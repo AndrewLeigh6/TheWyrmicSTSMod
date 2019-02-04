@@ -1,0 +1,7 @@
+out/
+.idea/
+preferences/
+sendToDevs/
+target/
+src/test
+src/main/java/wyrmicmod/lib
