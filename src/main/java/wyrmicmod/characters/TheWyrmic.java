@@ -19,8 +19,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
-import wyrmicmod.cards.WyrmicCommonAttack;
-import wyrmicmod.cards.WyrmicCommonSkill;
+import wyrmicmod.cards.*;
+
 import wyrmicmod.patches.AbstractCardEnum;
 import wyrmicmod.relics.PlaceholderRelic;
 
@@ -125,6 +125,13 @@ public class TheWyrmic extends CustomPlayer {
         retVal.add(WyrmicCommonSkill.ID);
         retVal.add(WyrmicCommonSkill.ID);
         retVal.add(WyrmicCommonSkill.ID);
+
+        retVal.add(WyrmicCommonPower.ID);
+        retVal.add(WyrmicUncommonPower.ID);
+        retVal.add(WyrmicRarePower.ID);
+
+        retVal.add(WyrmicFireball.ID);
+        retVal.add(WyrmicFlameStrike.ID);
         return retVal;
     }
 

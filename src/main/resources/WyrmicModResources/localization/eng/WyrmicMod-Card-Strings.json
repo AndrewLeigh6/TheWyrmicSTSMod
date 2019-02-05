@@ -49,5 +49,13 @@
   "TheWyrmic:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Wyrmic Orb."
+  },
+  "TheWyrmic:WyrmicFlameStrike": {
+    "NAME": "Flame Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "TheWyrmic:WyrmicFireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "Deal !D! Damage."
   }
 }

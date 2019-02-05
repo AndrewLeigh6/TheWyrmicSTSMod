@@ -18,12 +18,7 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-import wyrmicmod.cards.WyrmicCommonAttack;
-import wyrmicmod.cards.WyrmicCommonSkill;
-import wyrmicmod.cards.WyrmicRareAttack;
-import wyrmicmod.cards.WyrmicRareSkill;
-import wyrmicmod.cards.WyrmicUncommonAttack;
-import wyrmicmod.cards.WyrmicUncommonSkill;
+import wyrmicmod.cards.*;
 import wyrmicmod.characters.TheWyrmic;
 import wyrmicmod.patches.AbstractCardEnum;
 import wyrmicmod.patches.TheWyrmicEnum;
@@ -137,18 +132,28 @@ public class WyrmicMod
                 // Add the cards
                 BaseMod.addCard(new WyrmicCommonAttack());
                 BaseMod.addCard(new WyrmicCommonSkill());
+                BaseMod.addCard(new WyrmicCommonPower());
                 BaseMod.addCard(new WyrmicUncommonSkill());
                 BaseMod.addCard(new WyrmicUncommonAttack());
+                BaseMod.addCard(new WyrmicUncommonPower());
                 BaseMod.addCard(new WyrmicRareAttack());
                 BaseMod.addCard(new WyrmicRareSkill());
+                BaseMod.addCard(new WyrmicRarePower());
+                BaseMod.addCard(new WyrmicFlameStrike());
+                BaseMod.addCard(new WyrmicFireball());
 
                 // Unlock the cards
                 UnlockTracker.unlockCard(WyrmicCommonAttack.ID);
                 UnlockTracker.unlockCard(WyrmicCommonSkill.ID);
+                UnlockTracker.unlockCard(WyrmicCommonPower.ID);
                 UnlockTracker.unlockCard(WyrmicUncommonSkill.ID);
                 UnlockTracker.unlockCard(WyrmicUncommonAttack.ID);
+                UnlockTracker.unlockCard(WyrmicUncommonPower.ID);
                 UnlockTracker.unlockCard(WyrmicRareAttack.ID);
                 UnlockTracker.unlockCard(WyrmicRareSkill.ID);
+                UnlockTracker.unlockCard(WyrmicRarePower.ID);
+                UnlockTracker.unlockCard(WyrmicFlameStrike.ID);
+                UnlockTracker.unlockCard(WyrmicFireball.ID);
 
         }
 
