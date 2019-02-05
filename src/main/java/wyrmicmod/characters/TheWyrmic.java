@@ -38,8 +38,8 @@ public class TheWyrmic extends CustomPlayer {
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int CARD_DRAW = 5;
+    public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
 
@@ -76,7 +76,7 @@ public class TheWyrmic extends CustomPlayer {
 
         // =============== TEXTURES, ENERGY, LOADOUT =================
 
-        initializeClass(null, // required call to load textures and setup energy/loadout.
+        initializeClass(THE_WYRMIC_MAIN, // required call to load textures and setup energy/loadout.
                 // I left these in WyrmicMod.java (Ctrl+click them to see where they are,
                 // Ctrl+hover to see what they read.)
                 THE_WYRMIC_SHOULDER_1, // campfire pose
@@ -88,9 +88,9 @@ public class TheWyrmic extends CustomPlayer {
 
         // =============== ANIMATIONS =================
 
-        loadAnimation(THE_WYRMIC_SKELETON_ATLAS, THE_WYRMIC_SKELETON_JSON, 1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+        // loadAnimation(THE_WYRMIC_SKELETON_ATLAS, THE_WYRMIC_SKELETON_JSON, 1.0f);
+        // AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+        // e.setTime(e.getEndTime() * MathUtils.random());
 
         // =============== /ANIMATIONS/ =================
 
@@ -115,6 +115,15 @@ public class TheWyrmic extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(WyrmicCommonAttack.ID);
+        retVal.add(WyrmicCommonAttack.ID);
+        retVal.add(WyrmicCommonAttack.ID);
+        retVal.add(WyrmicCommonAttack.ID);
+        retVal.add(WyrmicCommonAttack.ID);
+
+        retVal.add(WyrmicCommonSkill.ID);
+        retVal.add(WyrmicCommonSkill.ID);
+        retVal.add(WyrmicCommonSkill.ID);
+        retVal.add(WyrmicCommonSkill.ID);
         retVal.add(WyrmicCommonSkill.ID);
         return retVal;
     }
