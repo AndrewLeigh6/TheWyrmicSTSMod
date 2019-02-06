@@ -1,10 +1,18 @@
 {
-  "TheWyrmic:WyrmicCommonAttack": {
+  "TheWyrmic:WyrmicBasicAttack": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! Damage."
   },
-  "TheWyrmic:WyrmicCommonSkill": {
+  "TheWyrmic:WyrmicBasicSkill": {
     "NAME": "Defend",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "TheWyrmic:WyrmicCommonAttack": {
+    "NAME": "Common Attack",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "TheWyrmic:WyrmicCommonSkill": {
+    "NAME": "Common Skill",
     "DESCRIPTION": "Gain !B! Block."
   },
   "TheWyrmic:WyrmicCommonPower": {
@@ -13,30 +21,38 @@
     "UPGRADE_DESCRIPTION": "Gain !M! Keywords."
   },
   "TheWyrmic:WyrmicUncommonAttack": {
-    "NAME": "Big slap",
+    "NAME": "Uncommon Attack",
     "DESCRIPTION": "Deal !D! Damage."
   },
   "TheWyrmic:WyrmicUncommonSkill": {
-    "NAME": "A Better Defend",
+    "NAME": "Uncommon Skill",
     "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
   },
   "TheWyrmic:WyrmicUncommonPower": {
-    "NAME": "Weirdness",
+    "NAME": "Uncommon Power",
     "DESCRIPTION": "Gain X Keywords.",
     "UPGRADE_DESCRIPTION": "Gain X +1 Keywords."
   },
   "TheWyrmic:WyrmicRareAttack": {
-    "NAME": "TOUCH",
+    "NAME": "Rare Attack",
     "DESCRIPTION": "Deal !D! Damage."
   },
   "TheWyrmic:WyrmicRareSkill": {
-    "NAME": "For Each Loop x2",
+    "NAME": "Rare Skill",
     "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
     "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
   },
   "TheWyrmic:WyrmicRarePower": {
-    "NAME": "In-Progress Form",
+    "NAME": "Rare Power",
     "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "TheWyrmic:WyrmicFlameStrike": {
+    "NAME": "Flame Strike",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "TheWyrmic:WyrmicFireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "Deal !D! Damage."
   },
   "TheWyrmic:WyrmicAttackWithVariable": {
     "NAME": "Special Strike",
@@ -49,13 +65,5 @@
   "TheWyrmic:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Wyrmic Orb."
-  },
-  "TheWyrmic:WyrmicFlameStrike": {
-    "NAME": "Flame Strike",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "TheWyrmic:WyrmicFireball": {
-    "NAME": "Fireball",
-    "DESCRIPTION": "Deal !D! Damage."
   }
 }

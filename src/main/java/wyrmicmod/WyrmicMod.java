@@ -130,28 +130,40 @@ public class WyrmicMod
         public void receiveEditCards() {
 
                 // Add the cards
+                BaseMod.addCard(new WyrmicBasicAttack());
+                BaseMod.addCard(new WyrmicBasicSkill());
+
                 BaseMod.addCard(new WyrmicCommonAttack());
                 BaseMod.addCard(new WyrmicCommonSkill());
                 BaseMod.addCard(new WyrmicCommonPower());
+
                 BaseMod.addCard(new WyrmicUncommonSkill());
                 BaseMod.addCard(new WyrmicUncommonAttack());
                 BaseMod.addCard(new WyrmicUncommonPower());
+
                 BaseMod.addCard(new WyrmicRareAttack());
                 BaseMod.addCard(new WyrmicRareSkill());
                 BaseMod.addCard(new WyrmicRarePower());
+
                 BaseMod.addCard(new WyrmicFlameStrike());
                 BaseMod.addCard(new WyrmicFireball());
 
                 // Unlock the cards
+                UnlockTracker.unlockCard(WyrmicBasicAttack.ID);
+                UnlockTracker.unlockCard(WyrmicBasicSkill.ID);
+
                 UnlockTracker.unlockCard(WyrmicCommonAttack.ID);
                 UnlockTracker.unlockCard(WyrmicCommonSkill.ID);
                 UnlockTracker.unlockCard(WyrmicCommonPower.ID);
+
                 UnlockTracker.unlockCard(WyrmicUncommonSkill.ID);
                 UnlockTracker.unlockCard(WyrmicUncommonAttack.ID);
                 UnlockTracker.unlockCard(WyrmicUncommonPower.ID);
+
                 UnlockTracker.unlockCard(WyrmicRareAttack.ID);
                 UnlockTracker.unlockCard(WyrmicRareSkill.ID);
                 UnlockTracker.unlockCard(WyrmicRarePower.ID);
+
                 UnlockTracker.unlockCard(WyrmicFlameStrike.ID);
                 UnlockTracker.unlockCard(WyrmicFireball.ID);
 

@@ -30,7 +30,7 @@ public class WyrmicFlameStrike extends CustomCard {
     public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicFlameStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = "WyrmicModResources/images/cards/Attack.png";
+    public static final String IMG = "WyrmicModResources/images/cards/FlameStrike.png";
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
