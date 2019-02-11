@@ -1,4 +1,4 @@
-package wyrmicmod.cards;
+package wyrmicmod.cards.uncommon;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

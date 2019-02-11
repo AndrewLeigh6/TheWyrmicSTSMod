@@ -1,4 +1,4 @@
-package wyrmicmod.cards;
+package wyrmicmod.cards.special;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -7,30 +7,23 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import basemod.abstracts.CustomCard;
-
 import wyrmicmod.WyrmicMod;
 import wyrmicmod.patches.AbstractCardEnum;
+import wyrmicmod.powers.CommonPower;
 
-public class WyrmicRareSkill extends CustomCard {
-
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * In order to understand how image paths work, go to wyrmicmod/WyrmicMod.java,
-     * Line ~140 (Image path section).
-     *
-     * For Each Loop x2" "Apply 1 Vulnerable to all enemies, 2(3) times.
-     */
+public class WyrmicColdDrakeAspect extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicRareSkill");
+    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicColdDrakeAspect");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = "WyrmicModResources/images/cards/Skill.png";
+    public static final String IMG = "WyrmicModResources/images/cards/ColdDrakeAspect.png";
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -40,35 +33,29 @@ public class WyrmicRareSkill extends CustomCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
 
     private static final int COST = 1;
+    private static final int MAGIC = 1;
+    private static final int UPGRADE_MAGIC = 1;
 
-    private int TIMES = 2;
-    private final int UPGRADE_TIMES = 3;
-
-    private int AMOUNT = 1;
+    public static final Logger logger = LogManager.getLogger(WyrmicMod.class.getName());
 
     // /STAT DECLARATION/
 
-    public WyrmicRareSkill() {
+    public WyrmicColdDrakeAspect() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = AMOUNT;
+        magicNumber = baseMagicNumber = MAGIC;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < TIMES; i++) {
-            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(
-                        new ApplyPowerAction(mo, p, new VulnerablePower(mo, magicNumber, false), magicNumber));
-            }
-        }
-
+        AbstractDungeon.actionManager
+                .addToBottom(new ApplyPowerAction(p, p, new CommonPower(p, p, magicNumber), magicNumber));
     }
 
     // Upgraded stats.
@@ -76,8 +63,8 @@ public class WyrmicRareSkill extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADE_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
-            TIMES = UPGRADE_TIMES;
             initializeDescription();
         }
     }

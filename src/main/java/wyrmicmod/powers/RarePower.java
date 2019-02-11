@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.actions.utility.QueueCardAction;
 
 import wyrmicmod.WyrmicMod;
-import wyrmicmod.cards.WyrmicRareAttack;
+import wyrmicmod.cards.rare.WyrmicRareAttack;
 
 public class RarePower extends AbstractPower {
     public AbstractCreature source;

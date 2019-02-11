@@ -5,3 +5,10 @@ sendToDevs/
 target/
 src/test
 src/main/java/wyrmicmod/lib
+twitchconfig.txt
+.vscode
+.settings
+.classpath
+.factorypath
+.project
+WyrmicMod.iml

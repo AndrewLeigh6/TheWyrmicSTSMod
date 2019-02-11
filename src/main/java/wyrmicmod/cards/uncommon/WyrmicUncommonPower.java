@@ -1,20 +1,20 @@
-package wyrmicmod.cards;
+package wyrmicmod.cards.uncommon;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import basemod.abstracts.CustomCard;
 
 import wyrmicmod.WyrmicMod;
+import wyrmicmod.actions.UncommonPowerAction;
 import wyrmicmod.patches.AbstractCardEnum;
 
-public class WyrmicUncommonAttack extends CustomCard {
+public class WyrmicUncommonPower extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -22,45 +22,48 @@ public class WyrmicUncommonAttack extends CustomCard {
      * In order to understand how image paths work, go to wyrmicmod/WyrmicMod.java,
      * Line ~140 (Image path section).
      *
-     * Big Slap Deal 10(15)) damage.
+     * Weirdness Apply X (+1) keywords to yourself.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicUncommonAttack");
+    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicUncommonPower");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = "WyrmicModResources/images/cards/Attack.png";
+    public static final String IMG = "WyrmicModResources/images/cards/Power.png";
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
 
-    private static final int COST = 1;
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int COST = -1;
+    private static final int MAGIC = 1;
 
     // /STAT DECLARATION/
 
-    public WyrmicUncommonAttack() {
+    public WyrmicUncommonPower() {
+
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = MAGIC;
     }
 
     // Actions the card should do.
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-                new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
+    public void use(final AbstractPlayer p, final AbstractMonster m) {
+        if (energyOnUse < EnergyPanel.totalCount) {
+            energyOnUse = EnergyPanel.totalCount;
+        }
+        AbstractDungeon.actionManager.addToBottom(
+                new UncommonPowerAction(p, m, magicNumber, upgraded, damageTypeForTurn, freeToPlayOnce, energyOnUse));
     }
 
     // Upgraded stats.
@@ -68,7 +71,7 @@ public class WyrmicUncommonAttack extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

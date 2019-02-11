@@ -18,7 +18,12 @@ import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+
 import wyrmicmod.cards.*;
+import wyrmicmod.cards.basic.*;
+import wyrmicmod.cards.common.*;
+import wyrmicmod.cards.uncommon.*;
+import wyrmicmod.cards.rare.*;
 import wyrmicmod.characters.TheWyrmic;
 import wyrmicmod.patches.AbstractCardEnum;
 import wyrmicmod.patches.TheWyrmicEnum;
@@ -147,6 +152,7 @@ public class WyrmicMod
 
                 BaseMod.addCard(new WyrmicFlameStrike());
                 BaseMod.addCard(new WyrmicFireball());
+                BaseMod.addCard(new WyrmicModalTest());
 
                 // Unlock the cards
                 UnlockTracker.unlockCard(WyrmicBasicAttack.ID);
@@ -166,6 +172,7 @@ public class WyrmicMod
 
                 UnlockTracker.unlockCard(WyrmicFlameStrike.ID);
                 UnlockTracker.unlockCard(WyrmicFireball.ID);
+                UnlockTracker.unlockCard(WyrmicModalTest.ID);
 
         }
 

@@ -1,4 +1,4 @@
-package wyrmicmod.cards;
+package wyrmicmod.cards.common;
 
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +13,7 @@ import basemod.abstracts.CustomCard;
 import wyrmicmod.WyrmicMod;
 import wyrmicmod.patches.AbstractCardEnum;
 
-public class WyrmicBasicSkill extends CustomCard {
+public class WyrmicCommonSkill extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +26,7 @@ public class WyrmicBasicSkill extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicBasicSkill");
+    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicCommonSkill");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = "WyrmicModResources/images/cards/Skill.png";
@@ -38,7 +38,7 @@ public class WyrmicBasicSkill extends CustomCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
@@ -49,7 +49,7 @@ public class WyrmicBasicSkill extends CustomCard {
 
     // /STAT DECLARATION/
 
-    public WyrmicBasicSkill() {
+    public WyrmicCommonSkill() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
 

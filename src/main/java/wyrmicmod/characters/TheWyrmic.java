@@ -19,7 +19,12 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+
 import wyrmicmod.cards.*;
+import wyrmicmod.cards.basic.*;
+import wyrmicmod.cards.common.*;
+import wyrmicmod.cards.uncommon.*;
+import wyrmicmod.cards.rare.*;
 
 import wyrmicmod.patches.AbstractCardEnum;
 import wyrmicmod.relics.PlaceholderRelic;
@@ -128,6 +133,7 @@ public class TheWyrmic extends CustomPlayer {
 
         retVal.add(WyrmicFireball.ID);
         retVal.add(WyrmicFlameStrike.ID);
+        retVal.add(WyrmicModalTest.ID);
         return retVal;
     }
 

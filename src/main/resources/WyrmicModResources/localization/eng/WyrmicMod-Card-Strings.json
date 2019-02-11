@@ -65,5 +65,21 @@
   "TheWyrmic:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Wyrmic Orb."
+  },
+  "TheWyrmic:WyrmicModalTest": {
+    "NAME": "WyrmicModalTest",
+    "DESCRIPTION": "Some stuff"
+  },
+  "TheWyrmic:WyrmicFireDrakeAspect": {
+    "NAME": "Fire Drake Aspect",
+    "DESCRIPTION": "Fire Drake Aspect."
+  },
+  "TheWyrmic:WyrmicColdDrakeAspect": {
+    "NAME": "Cold Drake Aspect",
+    "DESCRIPTION": "Cold Drake Aspect."
+  },
+  "TheWyrmic:WyrmicVenomDrakeAspect": {
+    "NAME": "Venom Drake Aspect",
+    "DESCRIPTION": "Venom Drake Aspect."
   }
 }
