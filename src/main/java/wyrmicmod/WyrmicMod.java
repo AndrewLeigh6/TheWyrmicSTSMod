@@ -152,7 +152,7 @@ public class WyrmicMod
 
                 BaseMod.addCard(new WyrmicFlameStrike());
                 BaseMod.addCard(new WyrmicFireball());
-                BaseMod.addCard(new WyrmicModalTest());
+                BaseMod.addCard(new WyrmicDrakeAspect());
 
                 // Unlock the cards
                 UnlockTracker.unlockCard(WyrmicBasicAttack.ID);
@@ -172,7 +172,7 @@ public class WyrmicMod
 
                 UnlockTracker.unlockCard(WyrmicFlameStrike.ID);
                 UnlockTracker.unlockCard(WyrmicFireball.ID);
-                UnlockTracker.unlockCard(WyrmicModalTest.ID);
+                UnlockTracker.unlockCard(WyrmicDrakeAspect.ID);
 
         }
 

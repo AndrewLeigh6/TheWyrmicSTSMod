@@ -66,20 +66,23 @@
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Wyrmic Orb."
   },
-  "TheWyrmic:WyrmicModalTest": {
-    "NAME": "WyrmicModalTest",
-    "DESCRIPTION": "Some stuff"
+  "TheWyrmic:WyrmicDrakeAspect": {
+    "NAME": "Drake Aspect",
+    "DESCRIPTION": "Choose a drake aspect."
   },
   "TheWyrmic:WyrmicFireDrakeAspect": {
     "NAME": "Fire Drake Aspect",
-    "DESCRIPTION": "Fire Drake Aspect."
+    "DESCRIPTION": "Fire Drake Aspect. Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Fire Drake Aspect. Gain !M! Strength."
   },
   "TheWyrmic:WyrmicColdDrakeAspect": {
     "NAME": "Cold Drake Aspect",
-    "DESCRIPTION": "Cold Drake Aspect."
+    "DESCRIPTION": "Cold Drake Aspect.",
+    "UPGRADE_DESCRIPTION": "Cold Drake Aspect. Gain !M! Dexterity."
   },
   "TheWyrmic:WyrmicVenomDrakeAspect": {
     "NAME": "Venom Drake Aspect",
-    "DESCRIPTION": "Venom Drake Aspect."
+    "DESCRIPTION": "Venom Drake Aspect.",
+    "UPGRADE_DESCRIPTION": "Venom Drake Aspect. Gain !M! Strength and Dexterity."
   }
 }

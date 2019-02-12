@@ -133,7 +133,7 @@ public class TheWyrmic extends CustomPlayer {
 
         retVal.add(WyrmicFireball.ID);
         retVal.add(WyrmicFlameStrike.ID);
-        retVal.add(WyrmicModalTest.ID);
+        retVal.add(WyrmicDrakeAspect.ID);
         return retVal;
     }
 

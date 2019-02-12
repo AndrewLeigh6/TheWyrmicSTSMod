@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,7 +15,6 @@ import org.apache.logging.log4j.Logger;
 import basemod.abstracts.CustomCard;
 import wyrmicmod.WyrmicMod;
 import wyrmicmod.patches.AbstractCardEnum;
-import wyrmicmod.powers.CommonPower;
 
 public class WyrmicFireDrakeAspect extends CustomCard {
 
@@ -38,9 +38,9 @@ public class WyrmicFireDrakeAspect extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
 
-    private static final int COST = 1;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int COST = 0;
+    private static final int STRENGTH_GAIN = 2;
+    private static final int UPGRADE_STRENGTH_GAIN = 2;
 
     public static final Logger logger = LogManager.getLogger(WyrmicMod.class.getName());
 
@@ -48,14 +48,14 @@ public class WyrmicFireDrakeAspect extends CustomCard {
 
     public WyrmicFireDrakeAspect() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = MAGIC;
+        magicNumber = baseMagicNumber = STRENGTH_GAIN;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager
-                .addToBottom(new ApplyPowerAction(p, p, new CommonPower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(p, p,
+                new StrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
     // Upgraded stats.
@@ -63,7 +63,7 @@ public class WyrmicFireDrakeAspect extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeMagicNumber(UPGRADE_STRENGTH_GAIN);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
