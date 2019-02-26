@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import wyrmicmod.WyrmicMod;
 import wyrmicmod.patches.AbstractCardEnum;
+import wyrmicmod.cards.AbstractWyrmicCard;
 
 // public class ${NAME} extends AbstractWyrmicCard
 public class cardTemplate extends AbstractWyrmicCard {

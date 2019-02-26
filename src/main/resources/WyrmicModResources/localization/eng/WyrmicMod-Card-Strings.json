@@ -72,8 +72,8 @@
   },
   "TheWyrmic:WyrmicFireDrakeAspect": {
     "NAME": "Fire Drake Aspect",
-    "DESCRIPTION": "Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength. NL Lose !TheWyrmic:SecondMagic! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength. NL Lose !TheWyrmic:SecondMagic! Dexterity."
   },
   "TheWyrmic:WyrmicColdDrakeAspect": {
     "NAME": "Cold Drake Aspect",

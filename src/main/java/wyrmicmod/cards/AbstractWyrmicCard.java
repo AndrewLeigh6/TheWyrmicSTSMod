@@ -8,7 +8,7 @@ public abstract class AbstractWyrmicCard extends CustomCard {
     // simply adding a second magic number,
     // if you're new to modding I suggest you skip this file until you know what
     // unique things that aren't provided
-    // by wyrmic, that you need in your own cards. For now, go check out the other
+    // by default, that you need in your own cards. For now, go check out the other
     // cards.
 
     // In this example, we use a custom Abstract Card in order to define a new magic

@@ -13,7 +13,7 @@ public class WyrmicSecondMagicNumber extends DynamicVariable {
 
     @Override
     public String key() {
-        return makeID("theWyrmic:SecondMagic");
+        return makeID("SecondMagic");
     }
 
     @Override
