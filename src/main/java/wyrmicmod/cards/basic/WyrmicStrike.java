@@ -13,7 +13,7 @@ import basemod.abstracts.CustomCard;
 
 import wyrmicmod.patches.AbstractCardEnum;
 
-public class WyrmicBasicAttack extends CustomCard {
+public class WyrmicStrike extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,10 +26,10 @@ public class WyrmicBasicAttack extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicBasicAttack");
+    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = "WyrmicModResources/images/cards/Attack.png";
+    public static final String IMG = "WyrmicModResources/images/cards/Strike.png";
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -44,8 +44,8 @@ public class WyrmicBasicAttack extends CustomCard {
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // Hey want a second damage/magic/block/unique number??? Great!
     // Go check out WyrmicAttackWithVariable and
@@ -57,7 +57,7 @@ public class WyrmicBasicAttack extends CustomCard {
 
     // /STAT DECLARATION/
 
-    public WyrmicBasicAttack() {
+    public WyrmicStrike() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         // Aside from baseDamage/MagicNumber/Block there's also a few more.

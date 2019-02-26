@@ -119,17 +119,17 @@ public class TheWyrmic extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(WyrmicBasicAttack.ID);
-        retVal.add(WyrmicBasicAttack.ID);
-        retVal.add(WyrmicBasicAttack.ID);
-        retVal.add(WyrmicBasicAttack.ID);
-        retVal.add(WyrmicBasicAttack.ID);
+        retVal.add(WyrmicStrike.ID);
+        retVal.add(WyrmicStrike.ID);
+        retVal.add(WyrmicStrike.ID);
+        retVal.add(WyrmicStrike.ID);
+        retVal.add(WyrmicStrike.ID);
 
-        retVal.add(WyrmicBasicSkill.ID);
-        retVal.add(WyrmicBasicSkill.ID);
-        retVal.add(WyrmicBasicSkill.ID);
-        retVal.add(WyrmicBasicSkill.ID);
-        retVal.add(WyrmicBasicSkill.ID);
+        retVal.add(WyrmicDefend.ID);
+        retVal.add(WyrmicDefend.ID);
+        retVal.add(WyrmicDefend.ID);
+        retVal.add(WyrmicDefend.ID);
+        retVal.add(WyrmicDefend.ID);
 
         retVal.add(WyrmicFireball.ID);
         retVal.add(WyrmicFlameStrike.ID);
@@ -251,7 +251,7 @@ public class TheWyrmic extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new WyrmicBasicAttack();
+        return new WyrmicStrike();
     }
 
     // ================ /LOAD THE KEYWORDS/ ===================

@@ -13,7 +13,7 @@ import basemod.abstracts.CustomCard;
 import wyrmicmod.WyrmicMod;
 import wyrmicmod.patches.AbstractCardEnum;
 
-public class WyrmicBasicSkill extends CustomCard {
+public class WyrmicDefend extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,10 +26,10 @@ public class WyrmicBasicSkill extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicBasicSkill");
+    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicDefend");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = "WyrmicModResources/images/cards/Skill.png";
+    public static final String IMG = "WyrmicModResources/images/cards/Defend.png";
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -49,7 +49,7 @@ public class WyrmicBasicSkill extends CustomCard {
 
     // /STAT DECLARATION/
 
-    public WyrmicBasicSkill() {
+    public WyrmicDefend() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
 

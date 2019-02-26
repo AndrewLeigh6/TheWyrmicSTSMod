@@ -32,8 +32,9 @@ public class WyrmicDrakeAspect extends CustomCard implements ModalChoice.Callbac
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
+    public static final String IMG = "WyrmicModResources/images/cards/DrakeAspect.png";
 
-    private static final int COST = 0;
+    private static final int COST = 2;
     private ModalChoice modal;
 
     private static final AbstractCard FireDrakeAspect = new WyrmicFireDrakeAspect();
@@ -43,8 +44,9 @@ public class WyrmicDrakeAspect extends CustomCard implements ModalChoice.Callbac
     public static final Logger logger = LogManager.getLogger(WyrmicMod.class.getName());
 
     public WyrmicDrakeAspect() {
-        super(ID, NAME, null, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
+        this.isInnate = true;
         this.exhaust = true;
 
         modal = new ModalChoiceBuilder().setCallback(this).setColor(COLOR).addOption(FireDrakeAspect)

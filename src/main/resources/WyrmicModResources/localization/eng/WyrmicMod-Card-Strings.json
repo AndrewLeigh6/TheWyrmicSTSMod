@@ -1,11 +1,11 @@
 {
-  "TheWyrmic:WyrmicBasicAttack": {
+  "TheWyrmic:WyrmicStrike": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! Damage."
+    "DESCRIPTION": "Human_Aspect. NL Deal !D! damage."
   },
-  "TheWyrmic:WyrmicBasicSkill": {
+  "TheWyrmic:WyrmicDefend": {
     "NAME": "Defend",
-    "DESCRIPTION": "Deal !D! Damage."
+    "DESCRIPTION": "Human_Aspect. NL Gain !B! Block."
   },
   "TheWyrmic:WyrmicCommonAttack": {
     "NAME": "Common Attack",
@@ -68,12 +68,12 @@
   },
   "TheWyrmic:WyrmicDrakeAspect": {
     "NAME": "Drake Aspect",
-    "DESCRIPTION": "Choose a drake aspect."
+    "DESCRIPTION": "Innate. Choose a drake aspect. Exhaust."
   },
   "TheWyrmic:WyrmicFireDrakeAspect": {
     "NAME": "Fire Drake Aspect",
-    "DESCRIPTION": "Fire Drake Aspect. Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Fire Drake Aspect. Gain !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength."
   },
   "TheWyrmic:WyrmicColdDrakeAspect": {
     "NAME": "Cold Drake Aspect",

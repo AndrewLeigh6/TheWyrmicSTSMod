@@ -1,7 +1,12 @@
 package wyrmicmod;
 
+import java.nio.charset.StandardCharsets;
+
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -31,8 +36,8 @@ import wyrmicmod.relics.PlaceholderRelic;
 import wyrmicmod.relics.PlaceholderRelic2;
 
 @SpireInitializer
-public class WyrmicMod
-                implements EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber, EditCharactersSubscriber {
+public class WyrmicMod implements EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber,
+                EditCharactersSubscriber, EditKeywordsSubscriber {
 
         // =============== INPUT TEXTURE LOCATION =================
 
@@ -135,8 +140,8 @@ public class WyrmicMod
         public void receiveEditCards() {
 
                 // Add the cards
-                BaseMod.addCard(new WyrmicBasicAttack());
-                BaseMod.addCard(new WyrmicBasicSkill());
+                BaseMod.addCard(new WyrmicStrike());
+                BaseMod.addCard(new WyrmicDefend());
 
                 BaseMod.addCard(new WyrmicCommonAttack());
                 BaseMod.addCard(new WyrmicCommonSkill());
@@ -155,8 +160,8 @@ public class WyrmicMod
                 BaseMod.addCard(new WyrmicDrakeAspect());
 
                 // Unlock the cards
-                UnlockTracker.unlockCard(WyrmicBasicAttack.ID);
-                UnlockTracker.unlockCard(WyrmicBasicSkill.ID);
+                UnlockTracker.unlockCard(WyrmicStrike.ID);
+                UnlockTracker.unlockCard(WyrmicDefend.ID);
 
                 UnlockTracker.unlockCard(WyrmicCommonAttack.ID);
                 UnlockTracker.unlockCard(WyrmicCommonSkill.ID);
@@ -180,5 +185,31 @@ public class WyrmicMod
         // in order to avoid conflicts if any other mod uses the same ID.
         public static String makeID(String idText) {
                 return "TheWyrmic:" + idText;
+        }
+
+        @Override
+        public void receiveEditKeywords() {
+                // keywords on cards are supposed to be Capitalized, while in
+                // Keyword-String.json they're lowercase
+
+                // multiword keywords are done with_underscores
+                // if you're using multiword keyword, the first element in your NAMES array in
+                // your keywords-strings.json has to be the same as the PROPER_NAME
+                // that is, in Card-Strings.json you would have a_long_keyword
+                // and in Keyword-Strings.json you would have PROPER_NAME as A Long Keyword, and
+                // the first element in NAMES be A Long Keyword, and the second element be
+                // a_long_keyword
+
+                Gson gson = new Gson();
+                String json = Gdx.files.internal("WyrmicModResources/localization/eng/WyrmicMod-Keyword-Strings.json")
+                                .readString(String.valueOf(StandardCharsets.UTF_8));
+                com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json,
+                                com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+
+                if (keywords != null) {
+                        for (Keyword keyword : keywords) {
+                                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                        }
+                }
         }
 }
