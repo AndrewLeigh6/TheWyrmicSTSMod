@@ -34,6 +34,7 @@ import wyrmicmod.patches.AbstractCardEnum;
 import wyrmicmod.patches.TheWyrmicEnum;
 import wyrmicmod.relics.PlaceholderRelic;
 import wyrmicmod.relics.PlaceholderRelic2;
+import wyrmicmod.variables.WyrmicSecondMagicNumber;
 
 @SpireInitializer
 public class WyrmicMod implements EditCardsSubscriber, EditRelicsSubscriber, EditStringsSubscriber,
@@ -138,6 +139,7 @@ public class WyrmicMod implements EditCardsSubscriber, EditRelicsSubscriber, Edi
 
         @Override
         public void receiveEditCards() {
+                BaseMod.addDynamicVariable(new WyrmicSecondMagicNumber());
 
                 // Add the cards
                 BaseMod.addCard(new WyrmicStrike());

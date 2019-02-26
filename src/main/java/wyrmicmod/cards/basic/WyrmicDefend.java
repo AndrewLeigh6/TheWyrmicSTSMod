@@ -1,32 +1,17 @@
 package wyrmicmod.cards.basic;
 
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import basemod.abstracts.CustomCard;
-
 import wyrmicmod.WyrmicMod;
+import wyrmicmod.cards.AbstractWyrmicCard;
 import wyrmicmod.patches.AbstractCardEnum;
 
-public class WyrmicDefend extends CustomCard {
+public class WyrmicDefend extends AbstractWyrmicCard {
 
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * In order to understand how image paths work, go to wyrmicmod/WyrmicMod.java,
-     * Line ~140 (Image path section).
-     *
-     * Defend Gain 5 (8) block.
-     */
-
-    // TEXT DECLARATION
-
-    public static final String ID = wyrmicmod.WyrmicMod.makeID("WyrmicDefend");
+    public static final String ID = WyrmicMod.makeID("WyrmicDefend");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = "WyrmicModResources/images/cards/Defend.png";
@@ -44,6 +29,8 @@ public class WyrmicDefend extends CustomCard {
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
 
     private static final int COST = 1;
+    private static final int UPGRADED_COST = 1;
+
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
@@ -52,9 +39,6 @@ public class WyrmicDefend extends CustomCard {
     public WyrmicDefend() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-
-        this.tags.add(BaseModCardTags.BASIC_DEFEND); // Tag your strike, defend and form cards so that they work
-                                                     // correctly.
     }
 
     // Actions the card should do.
@@ -70,6 +54,7 @@ public class WyrmicDefend extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

@@ -31,7 +31,7 @@ public abstract class AbstractWyrmicCard extends CustomCard {
             final CardTarget target) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
 
-        // Set all the things to their wyrmic values.
+        // Set all the things to their default values.
         isCostModified = false;
         isCostModifiedForTurn = false;
         isDamageModified = false;

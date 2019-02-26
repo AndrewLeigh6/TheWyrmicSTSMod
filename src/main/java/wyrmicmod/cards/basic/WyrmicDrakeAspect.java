@@ -30,7 +30,7 @@ public class WyrmicDrakeAspect extends CustomCard implements ModalChoice.Callbac
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.NONE;
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
     public static final String IMG = "WyrmicModResources/images/cards/DrakeAspect.png";
 

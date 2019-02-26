@@ -1,4 +1,4 @@
-package wyrmicmod.cards.basic;
+package wyrmicmod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -9,10 +9,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import wyrmicmod.WyrmicMod;
-import wyrmicmod.cards.AbstractWyrmicCard;
 import wyrmicmod.patches.AbstractCardEnum;
 
-public class WyrmicStrike extends AbstractWyrmicCard {
+// public class ${NAME} extends AbstractWyrmicCard
+public class cardTemplate extends AbstractWyrmicCard {
 
     public static final String ID = WyrmicMod.makeID("WyrmicStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -26,20 +26,21 @@ public class WyrmicStrike extends AbstractWyrmicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.WYRMIC_GREY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 1;
+    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 
-    public WyrmicStrike() {
+    public cardTemplate() {
+
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
     }

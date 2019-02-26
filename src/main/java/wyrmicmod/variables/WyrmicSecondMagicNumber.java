@@ -13,10 +13,7 @@ public class WyrmicSecondMagicNumber extends DynamicVariable {
 
     @Override
     public String key() {
-        return makeID("theWyrmic:SecondMagic"); // This is what you put between "!!" in your card strings to actually
-                                                // display the number.
-        // You can name this anything (no spaces), but please pre-phase it with your mod
-        // name as otherwise mod conflicts can occur.
+        return makeID("theWyrmic:SecondMagic");
     }
 
     @Override
